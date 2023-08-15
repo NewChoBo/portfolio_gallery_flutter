@@ -1,0 +1,66 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+
+##======================================================
+# .gitignore에 권장 제외항목 추가
+
+# Symbolication related
+**/app.*.symbols  # 새롭게 추가된 항목: Symbolication 관련 파일
+
+# Local configuration
+syncfusion_license.xml  # 새롭게 추가된 항목: Syncfusion 라이선스 관련 파일
+
+# macOS related
+**/macos/Flutter/ephemeral/  # 새롭게 추가된 항목: macOS Flutter 임시 파일
+**/macos/Pods/  # 새롭게 추가된 항목: macOS의 Pod 디렉터리
+**/macos/.last_build_id  # 새롭게 추가된 항목: macOS 마지막 빌드 ID
+**/macos/Flutter/flutter_assets/  # 새롭게 추가된 항목: macOS Flutter 자원
+**/macos/Flutter/App.framework  # 새롭게 추가된 항목: macOS Flutter 앱 프레임워크
+**/macos/Flutter/FlutterMacOS.framework  # 새롭게 추가된 항목: macOS Flutter macOS 프레임워크
+**/macos/Flutter/GeneratedPluginRegistrant.swift  # 새롭게 추가된 항목: macOS 플러그인 등록자
+
+# Others
+**/flutter_export_environment.sh  # 새롭게 추가된 항목: Flutter 환경 내보내기 스크립트
