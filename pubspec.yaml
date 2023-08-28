@@ -30,13 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.0.5 # provider 패키지 추가
 
   # 2023.08.15
   # http 프로토콜 패키지 설치
   http: ^0.13.5     
   # firebase 구축
   firebase_core: ^2.8.0 
-  firebase_auth: ^4.3.0
+  firebase_auth: ^4.7.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -59,16 +60,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:   # pubspec.yaml 파일 안에 assets 폴더 쓰겠다고 명시 (https://www.youtube.com/watch?v=mLQ-ehf3d6Y)
+    - assets/   # assets안의 모든 파일을 에셋으로 활용하겠습니다. 
+    # - images/a_dot_burr.jpeg  # 사용할 때에는 Image.asset('assets/images/a_dot_burr.jpeg') 와 같은 방식으로 사용할 수 있다.
+    # - images/a_dot_ham.jpeg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
