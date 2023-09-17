@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_gallery_flutter/screen/example/wallets/widgets/button.dart';
+import 'package:portfolio_gallery_flutter/screen/example/wallets/widgets/currency_card.dart';
 
 class WalletsWidget extends StatelessWidget {
   const WalletsWidget({Key? key}) : super(key: key);
@@ -77,6 +78,7 @@ class WalletsWidget extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            //버튼들
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -91,6 +93,58 @@ class WalletsWidget extends StatelessWidget {
                   textColor: Colors.white,
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const Text(
+                  'Wallets',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 36,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'View All',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.8),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+
+            const CurrencyCard(
+              name: 'Euro',
+              icon: Icons.euro_symbol_rounded,
+              code: 'EUR',
+              amount: '6 428',
+              isInverted: false,
+              order: 1,
+            ),
+            const CurrencyCard(
+              name: 'BitCoin',
+              icon: Icons.currency_bitcoin_rounded,
+              code: 'BTC',
+              amount: '9 785',
+              isInverted: true,
+              order: 2,
+            ),
+            const CurrencyCard(
+              name: 'Dollar',
+              icon: Icons.attach_money,
+              code: 'USD',
+              amount: '6 428',
+              isInverted: false,
+              order: 3,
             ),
           ],
         ),

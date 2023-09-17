@@ -98,3 +98,4 @@ code Actions, 전구, ctrl + space, ctrl + .
 
 위젯 extraction, props,
 
+singlechildscroll
