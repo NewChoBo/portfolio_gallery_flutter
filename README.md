@@ -45,3 +45,56 @@ MaterialApp, CupertinoApp
 MaterialApp: 안드로이드 느낌
 CupertinoApp: ios 느낌
 
+
+
+row와 column, mainAxis, crossAxis...
+
+text withOpacity는 상위 컴포넌트에 const 있으면 안됨
+
+설정(톱니바퀴) -> command palette -> open user settings 
+settings.json에서 
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+
+추가 (저장시 const 붙여주고, import 지워줄꺼임)
++ 기타 등등
+
+...전체
+```
+{
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "editor.codeActionsOnSave": {   // 저장시 const 자동으로 붙여줌
+        "source.fixAll": true
+    },
+    "dart.previewFlutterUiGuides": true,
+    "dart.openDevTools": "flutter",
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "emmet.excludeLanguages": ["markdown", "jsx"],
+    // "window.zoomLevel": 5,
+    // "go.toolsManagement.autoUpdate": true,
+
+
+
+    "git.autofetch": true
+}
+```
+
+code Actions, 전구, ctrl + space, ctrl + .
+
+확장 Error Lens 설치
+
+위젯 extraction, props,
+

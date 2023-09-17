@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_gallery_flutter/config/theme/themeNotifier.dart';
 import 'package:portfolio_gallery_flutter/config/theme/themes.dart';
-import 'package:portfolio_gallery_flutter/screen/portal/portal.dart';
+import 'package:portfolio_gallery_flutter/screen/example/wallets/wallets.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class _AppState extends State<App> {
       theme: customLightTheme,
       darkTheme: customDarkTheme,
       themeMode: themeNotifier.themeMode,
-      home: PortalWidget(),
+      home: WalletsWidget(),
     );
   }
 }
