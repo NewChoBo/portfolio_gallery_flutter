@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class PortalWidget extends StatefulWidget {
-  const PortalWidget({Key? key}) : super(key: key);
+class Counter2Widget extends StatefulWidget {
+  const Counter2Widget({Key? key}) : super(key: key);
 
   @override
-  State<PortalWidget> createState() => _PortalWidgetState();
+  State<Counter2Widget> createState() => _Counter2WidgetState();
 }
 
-class _PortalWidgetState extends State<PortalWidget> {
-  int counter = 0;
+class _Counter2WidgetState extends State<Counter2Widget> {
+  List<int> numbers = [];
 
   void counterAdd() {
     setState(() {
-      counter++;
+      numbers.add(numbers.length);
+      print(numbers);
     });
   }
 
@@ -32,19 +33,21 @@ class _PortalWidgetState extends State<PortalWidget> {
                 fontSize: 30,
               ),
             ),
-            Text(
-              '$counter',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 30,
+            for (var n in numbers) //for문으로 위젯 출력 가능
+              Text(
+                '$n',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
               ),
-            ),
             IconButton(
+              padding: const EdgeInsets.all(0),
               onPressed: counterAdd,
               icon: const Icon(
                 Icons.add_box,
                 color: Colors.blue,
-                size: 60,
+                size: 40,
               ),
               alignment: Alignment.center,
             )

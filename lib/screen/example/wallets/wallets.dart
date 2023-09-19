@@ -12,7 +12,7 @@ class WalletsWidget extends StatelessWidget {
     // https://velog.io/@tygerhwang/FLUTTER-Project-Theme-and-Size-Settings
 
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      // backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Padding(
         // padding: const EdgeInsets.all(20),
         padding: const EdgeInsets.symmetric(

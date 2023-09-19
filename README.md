@@ -99,3 +99,7 @@ code Actions, 전구, ctrl + space, ctrl + .
 위젯 extraction, props,
 
 singlechildscroll
+
+stateful widget은 lifecycle을 가지고있다. 이벤트에 반응
+initState(단 한번만) -> build
+

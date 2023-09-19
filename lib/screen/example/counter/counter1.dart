@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PortalWidget extends StatefulWidget {
-  const PortalWidget({Key? key}) : super(key: key);
+class Counter1Widget extends StatefulWidget {
+  const Counter1Widget({Key? key}) : super(key: key);
 
   @override
-  State<PortalWidget> createState() => _PortalWidgetState();
+  State<Counter1Widget> createState() => _Counter1WidgetState();
 }
 
-class _PortalWidgetState extends State<PortalWidget> {
+class _Counter1WidgetState extends State<Counter1Widget> {
   int counter = 0;
 
   void counterAdd() {
@@ -40,11 +40,12 @@ class _PortalWidgetState extends State<PortalWidget> {
               ),
             ),
             IconButton(
+              padding: const EdgeInsets.all(0),
               onPressed: counterAdd,
               icon: const Icon(
                 Icons.add_box,
                 color: Colors.blue,
-                size: 60,
+                size: 40,
               ),
               alignment: Alignment.center,
             )

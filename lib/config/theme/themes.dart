@@ -11,11 +11,17 @@ final ThemeData customLightTheme = ThemeData.light().copyWith(
     );
 
 final ThemeData customDarkTheme = ThemeData.dark().copyWith(
-  scaffoldBackgroundColor: Colors.black,
-  // primaryColor: Colors.blueGrey,
-  // colorScheme: ThemeData.dark().colorScheme.copyWith(
-  //       primary: Colors.blueGrey,
-  //       secondary: Colors.cyan, // 이전의 accentColor에 해당
-  //     ),
-  // ... other customizations ...
-);
+    scaffoldBackgroundColor: Colors.black,
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        color: Colors.red,
+      ),
+    )
+
+    // primaryColor: Colors.blueGrey,
+    // colorScheme: ThemeData.dark().colorScheme.copyWith(
+    //       primary: Colors.blueGrey,
+    //       secondary: Colors.cyan, // 이전의 accentColor에 해당
+    //     ),
+    // ... other customizations ...
+    );
