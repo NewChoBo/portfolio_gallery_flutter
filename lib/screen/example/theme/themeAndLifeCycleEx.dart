@@ -53,19 +53,19 @@ class _MyLargeTitleState extends State<MyLargeTitle> {
   @override
   void initState() {
     super.initState();
-    print('initState : 위젯이 생성될 때');
+    // print('initState : 위젯이 생성될 때');
   }
 
   @override
   void dispose() {
     super.dispose();
-    print('dispose : 위젯이 스크린에서 사라질 때 동작');
+    // print('dispose : 위젯이 스크린에서 사라질 때 동작');
   }
 
   //context는 위젯트리의 정보를 갖고있다?
   @override
   Widget build(BuildContext context) {
-    print('build : 위젯이 빌드될 때 동작');
+    // print('build : 위젯이 빌드될 때 동작');
     return Text(
       'My Large Title',
       style: TextStyle(

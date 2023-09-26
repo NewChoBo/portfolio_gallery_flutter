@@ -34,7 +34,7 @@ dependencies:
 
   # 2023.08.15
   # http 프로토콜 패키지 설치
-  http: ^0.13.5     
+  http: ^1.1.0     
   # firebase 구축
   firebase_core: ^2.8.0 
   firebase_auth: ^4.7.2
