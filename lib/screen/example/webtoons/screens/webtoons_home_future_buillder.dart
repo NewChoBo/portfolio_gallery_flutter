@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_model.dart';
 import 'package:portfolio_gallery_flutter/screen/example/webtoons/servies/api_service.dart';
+import 'package:portfolio_gallery_flutter/screen/example/webtoons/widgets/webtoon_widget_gesture_detector.dart';
 
 class WebtoonsHome extends StatelessWidget {
   WebtoonsHome({super.key});
@@ -25,24 +26,13 @@ class WebtoonsHome extends StatelessWidget {
       ),
       body: FutureBuilder(
           future: webtoons,
+          //snapshot으로 Future의 상태를 볼 수 있다
           builder: (context, snapshot) {
-            //snapshot으로 Future의 상태를 볼 수 있다
             if (snapshot.hasData) {
-              return ListView.separated(
-                  //separatorBuilder은 각 항목 사이사이에 위젯 리턴
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    var webtoon = snapshot.data![index];
-                    return Text(
-                      webtoon.title,
-                      style: const TextStyle(
-                        color: Colors.red,
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(width: 50),
-                  itemCount: snapshot.data!.length);
+              return Column(children: [
+                const SizedBox(height: 40),
+                Expanded(child: makeList(snapshot)),
+              ]);
             }
             return const Center(
               child: CircularProgressIndicator(),
@@ -92,7 +82,6 @@ class ListView01 extends StatelessWidget {
       itemCount: data.length,
       itemBuilder: (context, index) {
         var webtoon = data[index];
-        print(index);
         return Text(
           webtoon.title,
           style: const TextStyle(
@@ -102,4 +91,25 @@ class ListView01 extends StatelessWidget {
       },
     );
   }
+}
+
+//카드까지 제작
+ListView makeList(AsyncSnapshot<List<WebtoonModel>> snapshot) {
+  return ListView.separated(
+      //separatorBuilder은 각 항목 사이사이에 위젯 리턴
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 20,
+      ),
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (context, index) {
+        var webtoon = snapshot.data![index];
+        return Webtoon(
+          id: webtoon.id,
+          thumb: webtoon.thumb,
+          title: webtoon.title,
+        );
+      },
+      separatorBuilder: (context, index) => const SizedBox(width: 50),
+      itemCount: snapshot.data!.length);
 }

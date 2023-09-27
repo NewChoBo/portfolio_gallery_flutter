@@ -1,7 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/config/theme/themeNotifier.dart';
+import 'package:portfolio_gallery_flutter/config/theme/theme_notifier.dart';
 import 'package:portfolio_gallery_flutter/config/theme/themes.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/webtoons_home_futureBuillder.dart';
+import 'package:portfolio_gallery_flutter/screen/example/webtoons/screens/webtoons_home_future_buillder.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,6 +29,14 @@ class _AppState extends State<App> {
     final themeNotifier = context.watch<ThemeNotifier>();
 
     return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      ),
       theme: customLightTheme,
       darkTheme: customDarkTheme,
       themeMode: themeNotifier.themeMode,
