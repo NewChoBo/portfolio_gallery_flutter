@@ -36,8 +36,8 @@ dependencies:
   # http 프로토콜 패키지 설치
   http: ^1.1.0     
   # firebase 구축
-  firebase_core: ^2.8.0 
-  firebase_auth: ^4.7.2
+  # firebase_core: ^2.8.0 
+  # firebase_auth: ^4.7.2
 
 
   # The following adds the Cupertino Icons font to your application.
