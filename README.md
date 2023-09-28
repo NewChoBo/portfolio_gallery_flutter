@@ -103,3 +103,6 @@ singlechildscroll
 stateful widget은 lifecycle을 가지고있다. 이벤트에 반응
 initState(단 한번만) -> build
 
+Hero : tag만 같으면 됨
+네비게이션, 라우터 이해 필요
+
