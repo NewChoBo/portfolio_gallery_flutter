@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 권한 추가 -->
+    <!--인터넷 권한-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="portfolio_gallery_flutter"
         android:name="${applicationName}"
