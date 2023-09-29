@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 권한 추가 -->
+    <!--인터넷 권한-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="portfolio_gallery_flutter"
         android:name="${applicationName}"
@@ -30,4 +34,17 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    <!-- application 밖에 작성 -->
+    <!-- 설정 직접 추가 -->
+    <!-- url_launcher -->
+    <queries>
+        <!-- If your app checks for SMS support -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+            <!-- <data android:scheme="sms" />
+            <data android:scheme="tel" /> -->
+        </intent>
+    </queries>
 </manifest>

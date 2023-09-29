@@ -13,7 +13,7 @@ class _Counter2WidgetState extends State<Counter2Widget> {
   void counterAdd() {
     setState(() {
       numbers.add(numbers.length);
-      print(numbers);
+      // print(numbers);
     });
   }
 
