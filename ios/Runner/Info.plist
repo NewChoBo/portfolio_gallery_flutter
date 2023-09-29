@@ -47,5 +47,16 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- 설정 직접 추가 -->
+	<!-- url_launcher -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>https</string>
+		<!-- 
+		<string>sms</string>
+		<string>tel</string>
+		 -->
+	</array>
 </dict>
 </plist>

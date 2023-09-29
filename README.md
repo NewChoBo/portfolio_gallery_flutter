@@ -106,3 +106,9 @@ initState(단 한번만) -> build
 Hero : tag만 같으면 됨
 네비게이션, 라우터 이해 필요
 
+https://pub.dev/ 참조
+https://pub.dev/packages/url_launcher
+flutter pub add url_launcher로 웹 열게 할 수 있음.
+
+flutter pub add shared_preferences
+shared_preferences : 사용자 기기에 데이터 저장
