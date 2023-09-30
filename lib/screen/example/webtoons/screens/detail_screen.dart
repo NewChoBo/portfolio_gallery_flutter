@@ -4,8 +4,6 @@ import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon
 import 'package:portfolio_gallery_flutter/screen/example/webtoons/servies/api_service.dart';
 import 'package:portfolio_gallery_flutter/screen/example/webtoons/widgets/episode.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class DetailScreen extends StatefulWidget {
   final String title, thumb, id;
