@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_detail_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_episode_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_detail_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_episode_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_model.dart';
 
 class ApiService {
   static const String baseUrl =

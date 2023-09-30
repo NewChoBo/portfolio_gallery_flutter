@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/servies/api_service.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/servies/api_service.dart';
 
 class WebtoonsHome extends StatefulWidget {
   const WebtoonsHome({super.key});

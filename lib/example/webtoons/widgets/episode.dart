@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_episode_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_episode_model.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Episode extends StatelessWidget {

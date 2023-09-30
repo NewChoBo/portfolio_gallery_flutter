@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/servies/api_service.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/widgets/webtoon_widget_gesture_detector.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/servies/api_service.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/widgets/webtoon_widget_gesture_detector.dart';
 
 class WebtoonsHome extends StatelessWidget {
   WebtoonsHome({super.key});

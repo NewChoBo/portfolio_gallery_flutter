@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_detail_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/models/webtoon_episode_model.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/servies/api_service.dart';
-import 'package:portfolio_gallery_flutter/screen/example/webtoons/widgets/episode.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_detail_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/models/webtoon_episode_model.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/servies/api_service.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/widgets/episode.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DetailScreen extends StatefulWidget {

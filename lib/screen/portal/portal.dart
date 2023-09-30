@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_gallery_flutter/example/webtoons/screens/webtoons_home_future_buillder.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/portfolio_gallery.dart';
 
-class PortalWidget extends StatefulWidget {
-  const PortalWidget({Key? key}) : super(key: key);
+class PortalScreen extends StatefulWidget {
+  const PortalScreen({Key? key}) : super(key: key);
 
   @override
-  State<PortalWidget> createState() => _PortalWidgetState();
+  State<PortalScreen> createState() => _PortalScreenState();
 }
 
-class _PortalWidgetState extends State<PortalWidget> {
+class _PortalScreenState extends State<PortalScreen> {
   int counter = 0;
 
   void counterAdd() {
@@ -21,33 +23,69 @@ class _PortalWidgetState extends State<PortalWidget> {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Click Count',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WebtoonsHome(),
+                    fullscreenDialog: true, //스크린 뜨는 방향
+                  ),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.amber,
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(30),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Examples',
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            Text(
-              '$counter',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 30,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PortfolioGalleryScreen(),
+                    fullscreenDialog: true, //스크린 뜨는 방향
+                  ),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.amber,
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(30),
+                  child: Row(
+                    children: [
+                      Text(
+                        'portfolio gallery',
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            IconButton(
-              onPressed: counterAdd,
-              icon: const Icon(
-                Icons.add_box,
-                color: Colors.blue,
-                size: 60,
-              ),
-              alignment: Alignment.center,
-            )
           ],
         ),
       ),
