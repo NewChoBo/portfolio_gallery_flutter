@@ -112,3 +112,7 @@ flutter pub add url_launcher로 웹 열게 할 수 있음.
 
 flutter pub add shared_preferences
 shared_preferences : 사용자 기기에 데이터 저장
+
+휴대폰 연결이 잘 안될 때
+adb kill-server
+adb start-server

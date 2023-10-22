@@ -53,7 +53,11 @@ class _PomodoroWidgetState extends State<PomodoroWidget> {
   }
 
   void onResetPressed() {
-    timer.cancel();
+    try {
+      timer.cancel(); // timer를 취소 시도
+    } catch (e) {
+      print('Timer is not initialized yet!');
+    }
     setState(() {
       totalSeconds = setToRunSec;
       isRunning = false;
@@ -66,6 +70,16 @@ class _PomodoroWidgetState extends State<PomodoroWidget> {
     var duration = Duration(seconds: seconds);
     // print(duration.toString().split(".").first.substring(2, 7));
     return duration.toString().split(".").first.substring(2, 7);
+  }
+
+  @override
+  void dispose() {
+    try {
+      timer.cancel();
+    } catch (e) {
+      print('Timer is not initialized yet!');
+    }
+    super.dispose();
   }
 
   @override
