@@ -4,8 +4,8 @@ import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/cards/
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/cards/portfolio_widget.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/service/api_service.dart';
 
-class HomeMain extends StatelessWidget {
-  HomeMain({super.key});
+class PortfolioMain extends StatelessWidget {
+  PortfolioMain({super.key});
 
   final Future<List<PortfolioModel>> portfolios = ApiService.getPortfolios();
 

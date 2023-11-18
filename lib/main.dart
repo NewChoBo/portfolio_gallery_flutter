@@ -2,10 +2,12 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:portfolio_gallery_flutter/config/theme/theme_notifier.dart';
 import 'package:portfolio_gallery_flutter/config/theme/themes.dart';
-import 'package:portfolio_gallery_flutter/screen/portal/portal.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/routes/AppRouter.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolio_gallery.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolios/portfolio_detail.dart';
 import 'package:provider/provider.dart';
 
 //CORS 에러를 해결하기 위함
@@ -41,8 +43,10 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     final themeNotifier = context.watch<ThemeNotifier>();
+    final router = AppRouter.createRouter();
 
-    return MaterialApp(
+    return MaterialApp.router(
+      title: 'Portfolio Gallery',
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,
@@ -54,7 +58,7 @@ class _AppState extends State<App> {
       theme: customLightTheme,
       darkTheme: customDarkTheme,
       themeMode: themeNotifier.themeMode,
-      home: const PortfolioGalleryScreen(),
+      routerConfig: router,
     );
   }
 }

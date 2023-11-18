@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/main/home_main.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/main/portfolio_main.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/drawer_widget.dart';
 
 class PortfolioGalleryScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class _PortfolioGalleryScreenState extends State<PortfolioGalleryScreen> {
         title: const Text('hello'),
       ),
       drawer: const DrawerMain(),
-      body: HomeMain(),
+      body: PortfolioMain(),
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.abc_rounded),

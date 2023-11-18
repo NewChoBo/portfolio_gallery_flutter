@@ -9,16 +9,18 @@ class ApiService {
   //포트폴리오 목록을 가져온다.
   static Future<List<PortfolioModel>> getPortfolios() async {
     List<PortfolioModel> portfolioInstances = [];
-    final url = Uri.parse('$baseUrl/portfolio/list');
+    var page = 0;
+    var size = 3;
+    final url = Uri.parse('$baseUrl/portfolio/list').replace(queryParameters: {
+      'page': page.toString(),
+      'size': size.toString(),
+    });
 
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
       final apiResult = jsonDecode(response.body);
-      print(apiResult);
-
       final List<dynamic> portfolios = apiResult['responseData']['list'];
-      print(portfolios);
 
       for (var portfolio in portfolios) {
         final instance = PortfolioModel.fromJson(portfolio);
