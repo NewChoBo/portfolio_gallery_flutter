@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_gallery_flutter/example/select_example_screen.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolio_gallery.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolio_gallery_screen.dart';
 
 class PortalScreen extends StatelessWidget {
   const PortalScreen({Key? key}) : super(key: key);

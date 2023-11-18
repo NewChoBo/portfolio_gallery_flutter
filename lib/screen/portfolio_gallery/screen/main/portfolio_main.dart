@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/model/portfolio_model.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/cards/businesscard_widget.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/cards/portfolio_widget.dart';
@@ -7,7 +8,7 @@ import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/service/api_s
 class PortfolioMain extends StatelessWidget {
   PortfolioMain({super.key});
 
-  final Future<List<PortfolioModel>> portfolios = ApiService.getPortfolios();
+  final Future<List<PortfolioModel>> portfolios = ApiService.getPortfolioList();
 
   @override
   Widget build(BuildContext context) {
@@ -78,10 +79,21 @@ class PortfolioMain extends StatelessWidget {
       itemBuilder: (context, index) {
         var portfolio = snapshot.data![index];
 
-        return Portfolio(
-          userId: portfolio.userId,
-          portfolioId: portfolio.portfolioId,
-          thumb: portfolio.thumb,
+        return GestureDetector(
+          onTap: () {
+            context.go(
+              '/portfolio_gallery/detail/${portfolio.portfolioId}',
+              extra: portfolio,
+            );
+          },
+          child: Hero(
+            tag: 'portfolio-${portfolio.portfolioId}',
+            child: Portfolio(
+              userId: portfolio.userId,
+              portfolioId: portfolio.portfolioId,
+              thumb: portfolio.thumb,
+            ),
+          ),
         );
       },
     );

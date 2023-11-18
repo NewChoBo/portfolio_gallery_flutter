@@ -2,12 +2,9 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:portfolio_gallery_flutter/config/theme/theme_notifier.dart';
 import 'package:portfolio_gallery_flutter/config/theme/themes.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/routes/AppRouter.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolio_gallery.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolios/portfolio_detail.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/routes/app_router.dart';
 import 'package:provider/provider.dart';
 
 //CORS 에러를 해결하기 위함
