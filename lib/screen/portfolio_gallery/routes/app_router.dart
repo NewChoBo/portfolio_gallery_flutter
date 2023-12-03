@@ -8,7 +8,6 @@ import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfo
 class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
-      debugLogDiagnostics: true,
       errorBuilder: (context, state) => const NotFoundScreen(),
       routes: <RouteBase>[
         GoRoute(
