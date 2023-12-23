@@ -4,8 +4,6 @@ import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/model/portfol
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/not_found_screen.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolio_gallery_screen.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/portfolios/portfolio_detail.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/user/login_screen.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/user/signup_screen.dart';
 
 class AppRouter {
   static GoRouter createRouter() {
@@ -35,25 +33,6 @@ class AppRouter {
                 );
               },
             ),
-          ],
-        ),
-        GoRoute(
-          path: '/user',
-          builder: (BuildContext context, GoRouterState state) =>
-              const PortfolioGalleryScreen(),
-          routes: const [
-            // GoRoute(
-            //   path: 'login',
-            //   builder: (context, state) {
-            //     return const LoginScreen();
-            //   },
-            // ),
-            // GoRoute(
-            //   path: 'signup',
-            //   builder: (context, state) {
-            //     return const SignupScreen();
-            //   },
-            // ),
           ],
         ),
       ],
