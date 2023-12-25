@@ -64,3 +64,11 @@ syncfusion_license.xml  # 새롭게 추가된 항목: Syncfusion 라이선스 �
 
 # Others
 **/flutter_export_environment.sh  # 새롭게 추가된 항목: Flutter 환경 내보내기 스크립트
+
+#Firebase 민감정보
+android/app/google-services.json
+ios/firebase_app_id_file.json
+ios/Runner/GoogleService-Info.plist
+lib/firebase_options.dart
+macos/firebase_app_id_file.json
+macos/Runner/GoogleService-Info.plist

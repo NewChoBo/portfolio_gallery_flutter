@@ -17,13 +17,9 @@
     * formatting을 위해 코드 끝날 때마다 ','로 끝내기
 
 - firebase 준비
-    * firebase의 Authentication 기능 설치
+    * https://firebase.google.com/docs/flutter/setup?hl=ko&platform=ios
     * Firebase CLI 설치
-
-## 실행방법
-?????
-
-## 일지
+    * firebase의 Authentication 기능 설치
 
 ## 필요 지식, 팁
 뭔가 필요할 땐 공식문서를 참고해보자. (위젯같은 것들...)
