@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:portfolio_gallery_flutter/config/theme/theme_notifier.dart';
+import 'package:provider/provider.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   final FirebaseAuth auth;
@@ -17,6 +19,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
     return AppBar(
       title: const Text('NewChoBo'),
       backgroundColor: Colors.black,
@@ -25,6 +29,15 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(Icons.search),
           onPressed: () {
             // 검색 버튼 클릭 시 동작
+          },
+        ),
+        IconButton(
+          icon: Icon(themeNotifier.themeMode == ThemeMode.dark
+              ? Icons.brightness_7
+              : Icons.brightness_4),
+          onPressed: () {
+            // 라이트모드 / 다크모드 전환
+            Provider.of<ThemeNotifier>(context, listen: false).toggleTheme();
           },
         ),
         IconButton(
