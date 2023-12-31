@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
+import 'package:portfolio_gallery_flutter/screen/portal/portal.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/model/portfolio_model.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/auth/login_screen.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/auth/signup_screen.dart';
@@ -56,6 +57,14 @@ class AppRouter {
             ),
           ],
         ),
+
+        //연습 화면
+        GoRoute(
+          path: '/practice',
+          builder: (context, state) {
+            return const PortalScreen();
+          },
+        )
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/notifier/firebase_auth_notifier.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_gallery_flutter/config/theme/theme_notifier.dart';
@@ -14,8 +15,11 @@ void main() async {
   );
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeNotifier(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier()),
+        ChangeNotifierProvider(create: (_) => FirebaseAuthNotifier()),
+      ],
       child: const App(),
     ),
   );

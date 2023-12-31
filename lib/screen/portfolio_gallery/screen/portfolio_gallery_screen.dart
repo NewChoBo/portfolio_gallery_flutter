@@ -1,6 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/notifier/firebase_auth_notifier.dart';
 import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/screen/main/portfolio_main.dart';
-import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/drawer_widget.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/add-on/home/bottom_navigation_widget.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/add-on/home/drawer_widget.dart';
+import 'package:portfolio_gallery_flutter/screen/portfolio_gallery/widget/add-on/home/toolbar_widget.dart';
+import 'package:provider/provider.dart';
 
 class PortfolioGalleryScreen extends StatefulWidget {
   const PortfolioGalleryScreen({super.key});
@@ -12,22 +17,19 @@ class PortfolioGalleryScreen extends StatefulWidget {
 class _PortfolioGalleryScreenState extends State<PortfolioGalleryScreen> {
   @override
   Widget build(BuildContext context) {
+    final firebaseAuthNotifier = Provider.of<FirebaseAuthNotifier>(context);
+    final User? currentUser = firebaseAuthNotifier.currentUser;
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('hello'),
+      appBar: HomeAppBar(
+        auth: FirebaseAuth.instance,
+        onSelected: (String result) {},
       ),
       drawer: const DrawerMain(),
       body: PortfolioMain(),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.abc_rounded),
-          label: 'bye',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.abc_rounded),
-          label: 'hello',
-        ),
-      ]),
+      bottomNavigationBar: HomeBottomNavigationBar(
+        currentIndex: 0,
+      ),
     );
   }
 }
