@@ -74,6 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   labelText: 'Password',
                   hintText: 'Enter your password',
                   prefixIcon: Icon(Icons.lock),
+                  counterStyle: TextStyle(color: Colors.white),
                 ),
                 obscureText: true,
                 validator: (value) {
@@ -93,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  context.go('/user/signup');
+                  context.go('/auth/signup');
                 },
                 child: const Text('Sign up'),
               ),
