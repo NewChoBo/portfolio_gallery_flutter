@@ -12,12 +12,4 @@ final ThemeData customLightTheme = ThemeData.light().copyWith(
 
 final ThemeData customDarkTheme = ThemeData.dark().copyWith(
   scaffoldBackgroundColor: Colors.black,
-  textTheme: const TextTheme(
-    titleLarge: TextStyle(
-      color: Colors.white,
-    ),
-    bodyMedium: TextStyle(
-      color: Colors.white,
-    ),
-  ),
 );

@@ -74,7 +74,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   labelText: 'Password',
                   hintText: 'Enter your password',
                   prefixIcon: Icon(Icons.lock),
-                  counterStyle: TextStyle(color: Colors.white),
                 ),
                 obscureText: true,
                 validator: (value) {
