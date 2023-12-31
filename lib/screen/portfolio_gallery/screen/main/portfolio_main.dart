@@ -36,7 +36,6 @@ class PortfolioMain extends StatelessWidget {
           child: const Text(
             'Portfolios',
             style: TextStyle(
-              color: Colors.white,
               fontSize: 20,
             ),
           ),

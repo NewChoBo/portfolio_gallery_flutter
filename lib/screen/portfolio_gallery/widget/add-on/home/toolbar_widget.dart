@@ -23,7 +23,6 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       title: const Text('NewChoBo'),
-      backgroundColor: Colors.black,
       actions: <Widget>[
         IconButton(
           icon: const Icon(Icons.search),

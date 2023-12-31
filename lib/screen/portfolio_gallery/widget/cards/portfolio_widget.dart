@@ -15,19 +15,11 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 3 / 5,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 6,
-              offset: const Offset(6, 4),
-              color: Colors.black.withOpacity(0.5),
-            ),
-          ],
-        ),
+      child: Card(
         clipBehavior: Clip.hardEdge,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Column(
           children: [
             Expanded(
@@ -57,6 +49,9 @@ class Portfolio extends StatelessWidget {
                 fontSize: 22,
                 fontWeight: FontWeight.w600,
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
           ],
         ),

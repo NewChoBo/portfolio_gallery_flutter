@@ -41,11 +41,8 @@ class HomeBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.black,
       currentIndex: currentIndex,
       onTap: (index) => _onItemTapped(context, index),
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Colors.grey,
       items: navigationItems.map((item) {
         return BottomNavigationBarItem(
           icon: Icon(item['icon']),
